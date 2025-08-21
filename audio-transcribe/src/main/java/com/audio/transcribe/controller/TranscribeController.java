@@ -8,7 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/api")
 @CrossOrigin(origins = "http://localhost:5173")
 public class TranscribeController {
-
+//controller class
     private final GeminiTranscribeService service;
 
     public TranscribeController(GeminiTranscribeService service) {
