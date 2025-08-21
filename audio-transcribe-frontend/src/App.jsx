@@ -3,37 +3,46 @@ import UploadForm from "./component/UploadForm";
 
 function App() {
   return (
-    <div
-     style={{
+   <div
+  style={{
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "100vh", // full viewport height
-    width: "100vw",  // full viewport width
-    backgroundColor: "#e2e8f0",
+    height: "100vh",
+    width: "100vw",
+    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    padding: "20px",
   }}
+>
+  <div
+    style={{
+      width: "100%",
+      maxWidth: "700px",
+      padding: "40px",
+      textAlign: "center",
+      backgroundColor: "white",
+      borderRadius: "16px",
+      boxShadow: "0 8px 25px rgba(0,0,0,0.2)",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    }}
+  >
+    <h1
+      style={{
+        color: "#4f46e5",
+        marginBottom: "20px",
+        fontSize: "2.2rem",
+        fontWeight: "bold",
+      }}
     >
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "700px",
-          padding: "40px",
-          textAlign: "center",
-          backgroundColor: "#f0f4f8",
-          borderRadius: "12px",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
-          fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        }}
-      >
-        <h1 style={{ color: "#333", marginBottom: "20px" }}>
-          🎤 Audio Transcriber
-        </h1>
-        <p style={{ color: "#555", marginBottom: "30px" }}>
-          Upload your audio file and get instant transcription.
-        </p>
-        <UploadForm />
-      </div>
-    </div>
+       Audio Transcriber
+    </h1>
+    <p style={{ color: "#555", marginBottom: "30px" }}>
+      Upload your audio file and get instant transcription.
+    </p>
+    <UploadForm />
+  </div>
+</div>
+
   );
 }
 

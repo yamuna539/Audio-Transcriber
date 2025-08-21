@@ -41,33 +41,44 @@ function UploadForm() {
         }}
       >
         <input
-          type="file"
-          accept="audio/*"
-          onChange={handleFileChange}
-          style={{
-            padding: "10px",
-            borderRadius: "8px",
-            border: "1px solid #ccc",
-            cursor: "pointer",
-          }}
-        />
-        <button
-          type="submit"
-          disabled={loading}
-          style={{
-            padding: "12px 25px",
-            borderRadius: "8px",
-            border: "none",
-            backgroundColor: "#4f46e5",
-            color: "white",
-            fontWeight: "bold",
-            cursor: loading ? "not-allowed" : "pointer",
-            boxShadow: "0 3px 6px rgba(0,0,0,0.2)",
-            transition: "0.2s",
-          }}
-        >
-          {loading ? "Transcribing..." : "Upload & Transcribe"}
-        </button>
+  type="file"
+  accept="audio/*"
+  onChange={handleFileChange}
+  style={{
+    padding: "12px",
+    borderRadius: "10px",
+    border: "2px dashed #4f46e5",
+    cursor: "pointer",
+    backgroundColor: "#f9f9ff",
+    transition: "0.3s",
+  }}
+  onMouseOver={(e) => (e.target.style.backgroundColor = "#eef2ff")}
+  onMouseOut={(e) => (e.target.style.backgroundColor = "#f9f9ff")}
+/>
+
+<button
+  type="submit"
+  disabled={loading}
+  style={{
+    padding: "12px 25px",
+    borderRadius: "10px",
+    border: "none",
+    background: "linear-gradient(90deg, #4f46e5, #6d28d9)",
+    color: "white",
+    fontWeight: "bold",
+    cursor: loading ? "not-allowed" : "pointer",
+    boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
+    transition: "0.3s",
+  }}
+  onMouseOver={(e) =>
+    (e.target.style.background = "linear-gradient(90deg, #4338ca, #5b21b6)")
+  }
+  onMouseOut={(e) =>
+    (e.target.style.background = "linear-gradient(90deg, #4f46e5, #6d28d9)")
+  }
+>
+  {loading ? "⏳ Transcribing..." : " Upload & Transcribe"}
+</button>
       </form>
 
       {result && (
