@@ -1,0 +1,8 @@
+/* Make full height for html & body */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #e2e8f0; /* page background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
